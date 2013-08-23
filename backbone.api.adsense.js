@@ -10,10 +10,9 @@
 	});
 
 	// namespace
-	Adsense.Models = {};
-	Adsense.Views = {};
+	Adsense.Ads = {};
 
-	Adsense.Views.Banner = Backbone.View.extend({
+	Adsense.Ads.Banner = Backbone.View.extend({
 		el: ".banner",
 		options: {
 			width: 728,
