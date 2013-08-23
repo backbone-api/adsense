@@ -16,9 +16,9 @@ The plugin exposes an ```Adsense``` object in the global namespace. Use that to 
 
 After that you may instantiate banners in any container. There are views for the main banner types, for example:
 ```
-	new Adsense.Ads.Leaderboard({
-		id: "1234567890"
-	});
+new Adsense.Ads.Leaderboard({
+	id: "1234567890"
+});
 ```
 Look into the script for the list of available views...
 
@@ -27,7 +27,7 @@ Look into the script for the list of available views...
 
 Samples available in this repo's ```examples``` folder:
 
-* (Basic example)[http://rawgithub.com/backbone-api/adsense/master/examples/basic.html]
+* [Basic example](http://rawgithub.com/backbone-api/adsense/master/examples/basic.html)
 
 
 ## Credits
