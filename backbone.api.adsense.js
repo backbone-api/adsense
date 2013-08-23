@@ -20,7 +20,10 @@
 	// namespace
 	Adsense.Ads = {};
 
-	var Banner = Backbone.View.extend({
+	// Support backbone-app (if available)
+	var View = ( typeof APP != "undefined" && !_.isUndefined( APP.View) ) ? APP.View : Backbone.View;
+
+	var Banner = View.extend({
 		el: ".banner",
 		options: {
 			width: 0,
@@ -29,7 +32,7 @@
 		initialize: function( options ){
 			this.options.pubID = Adsense.get("id");
 			this.render();
-			return Backbone.View.prototype.initialize.call( this, options );
+			return View.prototype.initialize.call( this, options );
 		},
 		render: function(){
 			var html = template( this.options );
