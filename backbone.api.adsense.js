@@ -12,11 +12,11 @@
 	// namespace
 	Adsense.Ads = {};
 
-	Adsense.Ads.Banner = Backbone.View.extend({
+	var Banner = Backbone.View.extend({
 		el: ".banner",
 		options: {
-			width: 728,
-			height: 90
+			width: 0,
+			height: 0
 		},
 		initialize: function( options ){
 			this.options.pubID = Adsense.get("id");
@@ -28,6 +28,43 @@
 			$(this.el).html( html );
 			// queue an ad
 			window.adsbygoogle.push({});
+		}
+	});
+
+	Adsense.Ads.Banner = Banner;
+
+	Adsense.Ads.MediumRect = Banner.extend({
+		options: {
+			width: 320,
+			height: 250
+		}
+	});
+
+	Adsense.Ads.LargeRect = Banner.extend({
+		options: {
+			width: 336,
+			height: 280
+		}
+	});
+
+	Adsense.Ads.Leaderboard = Banner.extend({
+		options: {
+			width: 728,
+			height: 90
+		}
+	});
+
+	Adsense.Ads.WideSkyscraper = Banner.extend({
+		options: {
+			width: 160,
+			height: 600
+		}
+	});
+
+	Adsense.Ads.Mobile = Banner.extend({
+		options: {
+			width: 320,
+			height: 50
 		}
 	});
 
