@@ -11,7 +11,7 @@
 	window.adsbygoogle = window.adsbygoogle || [];
 	// load dependencies (assume jQuery is available?)
 	var async = ( typeof c != "undefined" && !_.isUndefined(c.script) ) ? c.sript : $.getScript;
-	async("http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
+	async("//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
 
 	var Adsense = new Backbone.Model({
 		id: 0
