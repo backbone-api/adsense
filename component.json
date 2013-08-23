@@ -1,6 +1,6 @@
 {
 	"name": "backbone.api.adsense",
-	"version": "0.0.1",
+	"version": "0.5.0",
 	"main": ["./backbone.api.adsense.js"],
 	"dependencies": { "backbone", "underscore" }
 }
