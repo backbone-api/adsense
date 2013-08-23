@@ -81,6 +81,21 @@
 	_.templateSettings.interpolate = /\{\{(.+?)\}\}/g;
 	var template = _.template('<ins class="adsbygoogle" style="display:inline-block;width:{{width}}px;height:{{height}}px" data-ad-client="ca-{{pubID}}" data-ad-slot="{{id}}"></ins>');
 
-	if(typeof window.Adsense == "undefined") window.Adsense = Adsense;
+
+	// Fallbacks
+	//APP = window.APP || (APP = { Models: {}, Collections: {}, Views: {} });
+	if( _.isUndefined(Backbone.API) ) Backbone.API = {};
+	Backbone.API.Adsense = Adsense;
+
+	// alias APP.API
+	if( typeof APP != "undefined" && (_.isUndefined( APP.API) || _.isUndefined( APP.API.Adsense) ) ){
+		APP.API = APP.API || {};
+		APP.API.Adsense = Backbone.API.Adsense;
+	}
+
+	// Shortcut
+	if(typeof window.Adsense == "undefined"){
+		window.Adsense = Adsense;
+	}
 
 })(this.Backbone, this._, this.$);
