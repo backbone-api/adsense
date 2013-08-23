@@ -1,3 +1,11 @@
+/* Backbone API: Adsense
+ * Source: https://github.com/backbone-api/adsense
+ *
+ * Created by Makis Tracend (@tracend)
+ * Distributed through [Makesites.org](http://makesites.org)
+ * Released under the [MIT license](http://makesites.org/licenses/MIT)
+ */
+
 (function(Backbone, _, $){
 
 	window.adsbygoogle = window.adsbygoogle || [];
